@@ -1,0 +1,193 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --para: 14px
+}
+body{
+    background-color: var(--Cream);
+    max-width: 1440px;
+    min-width: 375px;
+    font-family:"Montserrat", "Fraunces";
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;}
+.product{
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.product-image{
+    height: 400px;
+    width: 300px;
+}
+.product-image img:nth-child(1){
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-image img:nth-child(2){
+    display: none;
+}
+.product-body{
+    width: 300px;
+    height: 400px;
+    background-color: var(--White);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; 
+}
+.product-info{
+    margin: 1.5rem;
+}
+.product-info p{
+    color: var(--Darkgrayishblue);
+    font-weight: 700;
+    font-family: "Montserrat";  
+    width: 90%;
+}
+.product-info h1{
+    color: var(--Verydarkblue);
+    font-weight: 700;
+    font-family: "Fraunces";
+    margin-top: 1rem;
+}
+.product-info p{
+    font-size: var(--para);
+    color: var(--Darkgrayishblue);
+    margin-top: 1rem;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.product-price-details{
+    margin: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.product-price{
+    font-family: "Fraunces";
+    color: var(--Darkcyan);
+    font-weight: 700;
+    font-size: 25px;
+}
+.product-price-details small{
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+.product-price-buttn{
+    margin: 1.5rem;
+}
+.product-price-buttn button{
+    background-color: var(--Darkcyan);
+    display: inline-block;
+    height: 35px;
+    width: 255px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: transparent;
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+
+}
+.product-price-buttn button img{
+    width: 12px;
+    height: 12px;
+    margin-right: 0.3rem;
+    
+}
+@media(max-width: 677px) and (min-width: 375px){
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 1rem 1rem;
+    }
+    .product{
+        width: 400px;
+        height: 600px;
+        margin: 5rem 5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .product-image{
+        height: 400px;
+        width: 350px;
+    }
+    .product-image img:nth-child(1){
+        display: none;
+    }
+    .product-image img:nth-child(2){
+        border-top-right-radius: 14px;
+        border-top-left-radius: 14px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .product-body{
+        width: 350px;
+        height: 400px;
+        background-color: var(--White);
+        border-bottom-right-radius: 14px;
+        border-bottom-left-radius: 14px; 
+    }
+    .product-info{
+        margin: 1rem;
+    }
+    .product-info h1{
+        margin-left: 0.5rem;
+    }
+    .product-info p{
+        margin-top: 1rem;
+        font-weight: 400;
+        width: 100%;
+        font-size: 0.95rem;
+    }
+    .product-price{
+        font-size: 2rem;
+    }
+    .product-price-buttn button{
+        height: 50px;
+        width: 305px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    .product-price-buttn button img{
+        width: 14px;
+        height: 14px;
+        margin-right: 0.3rem;
+        
+    }
+}
